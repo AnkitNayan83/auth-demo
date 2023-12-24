@@ -52,17 +52,12 @@ const UserButton = () => {
                             <a href="/dashboard">Dashboard</a>
                         </DropdownMenuItem>
 
-                        <DropdownMenuItem className="flex items-center gap-4">
+                        <DropdownMenuItem
+                            className="flex items-center gap-2 cursor-pointer"
+                            onClick={() => signOut()}
+                        >
                             <LogOut className="h-4 w-4" />
-                            <p
-                                onClick={() =>
-                                    signOut({
-                                        redirect: false,
-                                    })
-                                }
-                            >
-                                Log out
-                            </p>
+                            <p>Log out</p>
                         </DropdownMenuItem>
                     </DropdownMenuContent>
                 </DropdownMenu>

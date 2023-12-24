@@ -6,7 +6,7 @@ const DashboardPage = async () => {
     const user = await currentUser();
 
     if (!user) {
-        redirect("/");
+        return redirect("/");
     }
 
     return (
